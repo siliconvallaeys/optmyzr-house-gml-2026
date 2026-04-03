@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Optmyzr House at GML 2026 — RSVP</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; }
+  .page { max-width: 680px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+
+  .hero { text-align: center; padding: 2.5rem 1rem 2rem; border-bottom: 0.5px solid rgba(0,0,0,0.12); margin-bottom: 2rem; }
+  .badge { display: inline-block; background: #E6F1FB; color: #185FA5; font-size: 12px; padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem; }
+  .hero h1 { font-size: 28px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.5rem; }
+  .hero .date { font-size: 15px; color: #555; margin-bottom: 0.25rem; }
+  .hero .location { font-size: 14px; color: #888; }
+  .hosts { display: flex; gap: 10px; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+  .host-chip { display: flex; align-items: center; gap: 8px; background: #efefed; border-radius: 20px; padding: 6px 14px 6px 6px; }
+  .host-avatar { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; }
+  .host-name { font-size: 13px; color: #1a1a1a; }
+
+  .perks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 2rem; }
+  .perk { background: #efefed; border-radius: 8px; padding: 0.75rem 1rem; text-align: center; }
+  .perk .icon { font-size: 18px; margin-bottom: 4px; }
+  .perk .label { font-size: 12px; color: #555; }
+
+  .section-title { font-size: 13px; font-weight: 500; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+  .count-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 1.5rem; }
+  .count { font-size: 28px; font-weight: 500; color: #1a1a1a; }
+  .count-label { font-size: 14px; color: #888; }
+  .guest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-bottom: 2rem; }
+  .guest-card { background: #fff; border: 0.5px solid rgba(0,0,0,0.1); border-radius: 12px; padding: 0.75rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .guest-name { font-size: 13px; font-weight: 500; color: #1a1a1a; line-height: 1.3; }
+  .guest-co { font-size: 11px; color: #888; }
+  .loading-msg { font-size: 13px; color: #aaa; padding: 0.5rem 0 1.5rem; }
+
+  .form-card { background: #fff; border: 0.5px solid rgba(0,0,0,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+  .form-card h2 { font-size: 17px; font-weight: 500; margin-bottom: 0.4rem; }
+  .form-card .subtitle { font-size: 13px; color: #888; margin-bottom: 1.25rem; }
+  .field { margin-bottom: 1rem; }
+  .field label { display: block; font-size: 13px; color: #555; margin-bottom: 6px; }
+  .field input, .field select {
+    width: 100%; padding: 8px 12px;
+    border: 0.5px solid rgba(0,0,0,0.2); border-radius: 8px;
+    font-size: 14px; background: #fff; color: #1a1a1a;
+    outline: none; height: 36px; font-family: inherit;
+  }
+  .field input:focus, .field select:focus {
+    border-color: rgba(0,0,0,0.4);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+  }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .field .hint { font-size: 11px; color: #aaa; margin-top: 4px; }
+  .submit-btn {
+    width: 100%; padding: 10px;
+    background: #1a1a1a; color: #fff;
+    border: none; border-radius: 8px;
+    font-size: 15px; font-weight: 500;
+    cursor: pointer; margin-top: 0.5rem;
+    font-family: inherit;
+  }
+  .submit-btn:hover { background: #333; }
+  .submit-btn:disabled { background: #aaa; cursor: not-allowed; }
+  .error-msg { font-size: 13px; color: #A32D2D; margin-top: 0.75rem; display: none; }
+
+  .success { text-align: center; padding: 2.5rem 1rem; display: none; }
+  .success .big { font-size: 22px; font-weight: 500; margin-bottom: 0.5rem; }
+  .success .sub { font-size: 14px; color: #888; line-height: 1.6; }
+
+  @media (max-width: 480px) {
+    .perks { grid-template-columns: repeat(2, 1fr); }
+    .field-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <div class="badge">Google Marketing Live 2026</div>
+    <h1>Optmyzr House</h1>
+    <p class="date">Tuesday, May 19 &nbsp;·&nbsp; 9am – 3pm</p>
+    <p class="location">282 San Antonio Road, Mountain View, CA</p>
+    <div class="hosts">
+      <div class="host-chip">
+        <div class="host-avatar" style="background:#E6F1FB;color:#0C447C;">FV</div>
+        <span class="host-name">Fred Vallaeys</span>
+      </div>
+      <div class="host-chip">
+        <div class="host-avatar" style="background:#EAF3DE;color:#3B6D11;">AL</div>
+        <span class="host-name">Aaron Levy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="perk"><div class="icon">🍕</div><div class="label">Food & drinks</div></div>
+    <div class="perk"><div class="icon">💻</div><div class="label">Vibe coding lounge</div></div>
+    <div class="perk"><div class="icon">🎙️</div><div class="label">Podcast studio</div></div>
+    <div class="perk"><div class="icon">👕</div><div class="label">Swag</div></div>
+  </div>
+
+  <div class="section-title">Who's coming</div>
+  <div class="count-row">
+    <span class="count" id="guest-count">—</span>
+    <span class="count-label">confirmed so far</span>
+  </div>
+  <div id="loading-guests" class="loading-msg">Loading guest list...</div>
+  <div class="guest-grid" id="guest-grid"></div>
+
+  <div class="form-card" id="rsvp-form-section">
+    <h2>RSVP</h2>
+    <p class="subtitle">We'll text you with any updates closer to the event.</p>
+    <div class="field-row">
+      <div class="field"><label>First name *</label><input type="text" id="fname" placeholder="Fred" /></div>
+      <div class="field"><label>Last name *</label><input type="text" id="lname" placeholder="Vallaeys" /></div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Email *</label>
+        <input type="email" id="email" placeholder="you@company.com" />
+      </div>
+      <div class="field">
+        <label>Cell phone *</label>
+        <input type="tel" id="phone" placeholder="+1 (415) 555-0100" />
+        <div class="hint">For event updates only. No spam, promise.</div>
+      </div>
+    </div>
+    <div class="field"><label>Company</label><input type="text" id="company" placeholder="Where do you work?" /></div>
+    <div class="field-row">
+      <div class="field">
+        <label>Dietary restrictions</label>
+        <select id="diet">
+          <option value="">None</option>
+          <option>Vegetarian</option>
+          <option>Vegan</option>
+          <option>Gluten-free</option>
+          <option>Halal</option>
+          <option>Kosher</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Shirt size</label>
+        <select id="shirt">
+          <option value="">Select</option>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </select>
+      </div>
+    </div>
+    <button class="submit-btn" id="submit-btn" onclick="submitRSVP()">Count me in</button>
+    <div class="error-msg" id="error-msg"></div>
+  </div>
+
+  <div class="success" id="success-msg">
+    <div class="big">You're in!</div>
+    <div class="sub">See you May 19th at the Optmyzr offices.<br>Fred & Aaron will text you with any updates.</div>
+  </div>
+
+</div>
+<script>
+// ============================================================
+// CONFIGURATION — paste your Apps Script Web App URL here
+const API_URL = 'YOUR_WEB_APP_URL';
+// ============================================================
+
+const COLORS = [
+  {bg:'#E6F1FB',fg:'#0C447C'},{bg:'#EAF3DE',fg:'#3B6D11'},
+  {bg:'#FAEEDA',fg:'#633806'},{bg:'#EEEDFE',fg:'#3C3489'},
+  {bg:'#FAECE7',fg:'#712B13'},{bg:'#E1F5EE',fg:'#085041'},
+  {bg:'#FBEAF0',fg:'#72243E'},{bg:'#FCEBEB',fg:'#791F1F'}
+];
+
+function initials(name) {
+  return name.trim().split(/\s+/).map(p => p[0]).join('').toUpperCase().slice(0,2);
+}
+
+function renderGuests(guests) {
+  const grid = document.getElementById('guest-grid');
+  document.getElementById('guest-count').textContent = guests.length;
+  document.getElementById('loading-guests').style.display = 'none';
+  grid.innerHTML = '';
+  guests.forEach((g, i) => {
+    const c = COLORS[i % COLORS.length];
+    const card = document.createElement('div');
+    card.className = 'guest-card';
+    card.innerHTML = `<div class="avatar" style="background:${c.bg};color:${c.fg}">${initials(g.name)}</div><div class="guest-name">${g.name}</div><div class="guest-co">${g.company || ''}</div>`;
+    grid.appendChild(card);
+  });
+}
+
+async function loadGuests() {
+  try {
+    const res = await fetch(`${API_URL}?action=list`);
+    const data = await res.json();
+    renderGuests(data.guests || []);
+  } catch(e) {
+    document.getElementById('loading-guests').textContent = 'Could not load guest list.';
+    document.getElementById('guest-count').textContent = '—';
+  }
+}
+
+async function submitRSVP() {
+  const fname = document.getElementById('fname').value.trim();
+  const lname = document.getElementById('lname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const diet = document.getElementById('diet').value;
+  const shirt = document.getElementById('shirt').value;
+  const errEl = document.getElementById('error-msg');
+  const btn = document.getElementById('submit-btn');
+
+  errEl.style.display = 'none';
+  if (!fname || !lname || !email || !phone) {
+    errEl.textContent = 'Please fill in your name, email, and cell phone.';
+    errEl.style.display = 'block';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Saving...';
+
+  try {
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'rsvp', firstName: fname, lastName: lname, email, phone, company, diet, shirt })
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('rsvp-form-section').style.display = 'none';
+      document.getElementById('success-msg').style.display = 'block';
+      loadGuests();
+    } else {
+      throw new Error();
+    }
+  } catch(e) {
+    errEl.textContent = 'Something went wrong. Please try again.';
+    errEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = 'Count me in';
+  }
+}
+
+loadGuests();
+</script>
+</body>
+</html>
